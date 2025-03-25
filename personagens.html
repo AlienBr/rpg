@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider e Lista de Personagens</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .content {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            width: 100%;
+            padding: 0 20px; /* 20px de margem em ambos os lados */
+        }
+
+        .slider-container {
+            width: 308px;
+            height: 429px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider img {
+            width: 308px;
+            height: 429px;
+            object-fit: cover;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev { left: 5px; }
+        .next { right: 5px; }
+
+        .character-list {
+            flex-grow: 1;
+            border: 2px solid black;
+            padding: 15px;
+            background: #f9f9f9;
+        }
+
+        .character-list h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .character {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-bottom: 1px solid gray;
+        }
+
+        .character:last-child {
+            border-bottom: none;
+        }
+
+        .text-content {
+            margin-top: 20px;
+            width: 100%;
+            padding: 0 20px; /* 20px de margem nas laterais */
+            text-align: justify;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <div class="slider-container">
+            <div class="slider">
+                <img src="nat2.jpg">
+                <img src="nat4.jpg">
+                <img src="nat3.jpg">
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <div class="character-list">
+            <h2>Natasha Clifford Weber Miller</h2>
+            <div class="character">
+                <strong>Nat</strong>
+                <p>Idade: 24 anos</p>
+                <p>Nacionalidade: Inglesa</p>
+                <p>Mãe: Elizabeth Clifford Weber</p>
+                <p>Pai: William Lucchesi Weber</p>
+                <p>Irmã: Chloe Clifford Weber</p>
+                <p>Estado civil: Casada</p>
+            </div>
+            <div class="character">
+                <strong>Habilidades</strong>
+                <p>Manipulação de energia psíquica</p>
+                <p>Influência mental</p>
+            </div>
+            <div class="character">
+                <strong>Ocupação</strong>
+                <p>CEO da Weber</p>
+                <p>Regente Honorária do Reino</p>
+            </div>
+        </div>
+    </div> 
+
+    <div class="text-content">
+        <p>
+          Origem e História de Natasha Clifford Weber Miller:
+          Nascida na Inglaterra, Natasha é a herdeira do trono inglês e a filha mais velha da Rainha Elizabeth Clifford Weber. Desde pequena, foi criada para carregar o peso da coroa e comandar o império econômico da Weber, uma das empresas mais influentes da Europa, responsável por liderar o avanço tecnológico e industrial durante a Revolução a Vapor.
+          Apesar de ser criada em meio ao luxo e à pressão da realeza, Natasha sempre teve uma alma discreta e reservada, preferindo agir nas sombras e observar o mundo ao invés de ser o centro das atenções. Seu refúgio na infância era uma casinha na árvore escondida nos jardins do palácio, construída por seu pai e seu tio. Lá, ela criava memórias com seu melhor amigo, Joel Miller, que mais tarde se tornaria seu marido.
+          Quando atingiu a idade adulta, Natasha foi enviada para Paladis, uma potência francesa em reestruturação política, para expandir os negócios Weber e fortalecer a influência da família em toda a Europa. Foi nesse período que Natasha entrou em contato com a Pedra do Poder, despertando suas habilidades psíquicas, que até então estavam adormecidas.
+          Após consolidar o poder da Weber em Paladis, Natasha retornou à Inglaterra ao lado de Joel, agora seu marido, e juntos passaram a viver em uma casa discreta, afastada dos olhares da corte, enquanto ela aguarda o momento de assumir o trono.
+          Apesar de ainda estar à sombra de sua mãe, Natasha já é vista como uma das figuras mais poderosas e influentes do continente, tanto no cenário político quanto no econômico — e carrega um poder psíquico que ninguém além de Joel conhece.
+        </p>
+    </div>
+    <br><br>
+<div class="content">
+  <div class="slider-container">
+      <div class="slider">
+          <img src="nat2.jpg">
+          <img src="nat4.jpg">
+          <img src="nat3.jpg">
+      </div>
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
+  </div>
+
+  <div class="character-list">
+      <h2>Joel Weber Miller Hamilton</h2>
+      <div class="character">
+          <strong>Joel</strong>
+          <p>Idade: 26 anos</p>
+          <p>Nacionalidade: Inglesa</p>
+          <p>Mãe: Emillie Miller</p>
+          <p>Pai: Lewis Grant Hamilton</p>
+          <p>Irmãos: tyler Miller, Elliot Miller </p>
+          <p>Estado civil: Casado</p>
+      </div>
+      <div class="character">
+          <strong>Habilidades</strong>
+          <p>Não possui poderes</p>
+      </div>
+      <div class="character">
+          <strong>Ocupação</strong>
+          <p>Vice presidente da Weber</p>
+          <p>Conselheiro Real de Políticas Externas</p>
+      </div>
+  </div>
+</div> 
+
+<div class="text-content">
+  <p>
+    Origem e História de Joel Miller Weber:
+    Joel nasceu na Inglaterra, em uma família humilde, filho de um engenheiro que trabalhava para a Weber, o império industrial comandado pela família real inglesa.
+    Sua infância foi marcada por momentos simples, mas também por uma forte amizade com Natasha Clifford Weber, a herdeira do trono inglês. Joel sempre foi uma presença constante ao lado dela, especialmente em momentos como as brincadeiras na casinha na árvore escondida nos jardins do palácio, que se tornou um símbolo da conexão entre eles.
+    No entanto, a vida de Joel mudou drasticamente quando seus pais morreram em um acidente. Ainda jovem, ele foi forçado a assumir a responsabilidade de criar seus dois irmãos mais novos, Elliot e Tyler, que, com o tempo, se revoltaram e seguiram o caminho do crime e da traição, abandonando Joel.
+    Após a tragédia, Joel foi apadrinhado pelo pai de Natasha, que além de Rei da Inglaterra, era também o CEO da Weber na época. Sob a tutela do rei, Joel recebeu formação política, estratégica e empresarial, tornando-se uma das figuras mais promissoras do império.
+    Quando Natasha foi enviada para Paladis, uma potência em reestruturação política, para expandir o poder da Weber, Joel foi designado para acompanhá-la e protegê-la, mas não como um guarda, e sim como seu conselheiro e representante da coroa inglesa. Lá, Joel ascendeu rapidamente, tornando-se Ministro de Relações Exteriores de Paladis, uma posição de extrema influência nas negociações políticas e alianças do país.
+    Após consolidar o poder de Natasha na região, Joel renunciou ao cargo de ministro para retornar à Inglaterra ao lado de Natasha, agora sua esposa. Ele assumiu o cargo de Vice-Presidente da Weber, trabalhando ao lado de Natasha para expandir o império industrial por toda a Europa.
+    Joel carrega consigo o peso de um passado marcado por perda e traição, mas isso o tornou um homem equilibrado, sensato e extremamente leal. Ele se tornou a mente estratégica e o escudo invisível de Natasha, sempre agindo nas sombras para proteger tanto a mulher que ama quanto o legado que eles estão construindo juntos.
+  </p>
+</div>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlide(index) {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slider img');
+            if (index >= slides.length) slideIndex = 0;
+            if (index < 0) slideIndex = slides.length - 1;
+            slider.style.transform = `translateX(${-slideIndex * 308}px)`;
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlide(slideIndex);
+        }
+
+        function prevSlide() {
+            slideIndex--;
+            showSlide(slideIndex);
+        }
+
+        showSlide(slideIndex);
+    </script>
+
+</body>
+</html>
